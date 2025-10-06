@@ -1,0 +1,88 @@
+PROBLEM DESCRIPTION:
+
+The program must construct a student information base by reading data from an input file which is given as a command line argument. The various sections of the input file contain various operations on the database. Finally, the program must write the output to a file whose name is also a command line argument. The format of the file, hints on programming etc. are given below. The executable of your program should also be named MIxx, where xx is your reg. no..
+
+NOTE: You need to handle error conditions such as trying to add a duplicate record (primary key is Roll No. for students and Roll No., Course No. for courses), modify a non-existing record, delete a non-existing record for both students and courses.
+
+Build a simple student database. The following are the fields that a student record contains:
+
+1. Roll No. : Integer
+
+2. Name : String
+
+3. CGPA : Float
+
+4. Number of subjects : Integer
+
+NOTE: Roll no. and Name are primary keys and cannot be modified once entered.
+
+For every subject, it has the following:
+
+1. Course Code
+
+2. Marks
+
+NOTE: Course Code is a primary key and only Marks can be modified.
+
+The input file from which the student information is to be read is formatted in the following manner, where in Add Student, the number of subjects is set to 0. This needs to be updated as you add courses for this student.
+
+# Add Student
+
+Roll No., Name, CGPA, Number of subjects
+
+Roll No., Name, CGPA, Number of subjects
+
+...
+# Add course
+
+Roll No., Course Code, Marks
+
+Roll No., Course Code, Marks
+
+...
+
+# Modify Student
+
+Roll No., CGPA
+
+Roll No., CGPA
+
+...
+
+# Modify Course
+
+Roll No., Course Code, Marks
+
+Roll No., Course Code, Marks
+
+...
+
+# Delete Student
+
+Roll No.
+
+Roll No.
+
+...
+
+# Delete Course
+
+Roll No., Course Code
+
+Roll No., Course Code
+
+...
+
+NOTE: The various sections can come in any order. There is no fixed order to add students/courses or delete/modify them.
+
+You need to parse the various sections of the file in CSV (comma space value) format.
+
+An EXAMPLE file is attached for your reference.
+
+
+NOTE: Any line starting with # is a comment line and should be discarded after parsing for information regarding whether the operation to follow is an Add student/Add course/Modify student/Modify course/Delete student/Delete course. Any blank lines should also be discarded. Please Note that Add student, Add course, etc. sections need not come in strict order and also can occur many times in the file. Please also note that you need to increment the number of subjects if you are adding subjects from the Add Course section of the input file.
+
+Once you have parsed the file, you need to use the APIs exported by the student information module to add the student record and/or the marks record for a student.
+
+HINT: Use the C library call fgets for reading one line at a time from the file. Then use the call sscanf to parse individual items on the line - keep in mind that this is CSV format and set your sscanf string accordingly.
+

@@ -1,0 +1,17 @@
+In this assignment, you will implement the Prim's algorithm to find the minimum spanning tree. The input to the program will be the name of the file containing the graph data as command line argument.
+
+The first line of the graph will contain the number of nodes and edges in the graph and has the following format:
+
+<Num of Nodes> <Num of Edges>
+
+All the other lines of the file represent the edges of the graph and the weight of the edge. The format of each line is as follows:
+
+<from node> <to node> <weight>
+
+From these lines, you can construct the graph. The <from node> will be in nondecreasing order. You can, obviously, have multiple lines with the same <from node> depending on how many edges to other nodes it has.
+
+Take the first node to occur in the graph, i.e., the first <from node> in the file, as the root node for your spanning tree.
+
+In another iteration to construct the spanning tree, take any random node as the root node.
+
+Output: The output is written to a file whose name is given as a command line argument. Print the spanning tree to this file using inorder traversal of the tree. The output file will contain two trees for the two iterations of constructing the spanning tree from the first node in the file as root and a random node as a root.

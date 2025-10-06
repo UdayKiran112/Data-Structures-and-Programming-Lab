@@ -1,0 +1,5 @@
+In this assignment, you will accept the name of the input file as a command line argument. This file will contain numbers, one per line. You need to read these values and sort them in ascending order using Heapsort. Print the values from the tree by using the right order of parsing the tree to the output file which is specified as the second  command line argument.
+
+You can get the Heapsort algorithm with all the modular function algorithms it uses in the book "Introduction to Algorithms" by Cormen, Leiserson and Rivest.
+
+
