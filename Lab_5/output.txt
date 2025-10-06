@@ -1,0 +1,4 @@
+MST with root 0:
+0 1 2 3 
+MST with root 2:
+3 2 1 0 
